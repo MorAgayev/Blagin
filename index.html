@@ -5,24 +5,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Blogin2</title>
+    <link rel="shortcut icon" href="/images/favicon/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Blogin</title>
 </head>
 
 <body>
-    <div class="main-container">
-        <header class="main-header">
-            <div class="logo">Blogin<span>.</span></div>
-            <ul class="main-nav">
-                <li><a href="#">Jornal</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Work</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </header>
-        <main class="main-cards">
+        <div class="top-container">
+            <header class="main-header main-layout flex">
+                <div class="logo">Blogin<span>.</span></div>
+                <button class="menu-btn" onclick="menuToggle()">☰</button>
+                <ul class="main-nav flex">
+                    <button class="menu-btn" onclick="menuToggle()">X</button>
+                    <li><a href="#">Jornal</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </header>
+        </div>
+        <main class="main-cards main-layout">
             <div class="card">
-                <div class="card-image"><img src="/imges/001.png" alt=""></div>
+                <img src="images/001.png" alt="">
+                <div class="card-content">
+                    <h3>Duis aute irure dolor in henderit in voluptate.</h3>
+                    <div class="card-p">
+                        <p>
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur...
+                        </p>
+                    </div>
+                    <button>Continue Reading </button>
+                </div>
+            </div>
+            <div class="card">
+               <img src="images/002.png" alt="">
                 <div class="card-content">
                     <h3>Duis aute irure dolor in henderit in voluptate.</h3>
                     <div class="card-p">
@@ -38,23 +58,7 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-image"><img src="/imges/002.png" alt=""></div>
-                <div class="card-content">
-                    <h3>Duis aute irure dolor in henderit in voluptate.</h3>
-                    <div class="card-p">
-                        <p>
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur...
-                        </p>
-                    </div>
-                    <button>Continue Reading</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-image"><img src="/imges/003.png" alt=""></div>
+                <img src="images/003.png" alt="">
                 <div class="card-content">
                     <h3>Duis aute irure dolor in henderit in voluptate.</h3>
                     <div class="card-p">
@@ -70,21 +74,26 @@
                 </div>
             </div>
         </main>
-        <section class="main-pagination">
+        <section class="main-pagination main-layout flex">
             <a href="#">previous</a>
             <a href="#">next</a>
         </section>
-        <footer class="main-footer">
+        <footer class="main-footer flex">
             <div class="logo">Blogin<span>.</span></div>
             <small>© 2014 Blogin.com - All Rights Reserved - Find more free Templates at Pixelhint.com</small>
             <div class="social-links">
-                <a href="#">f</a>
-                <a href="#">t</a>
-                <a href="#">Be</a>
-                <a href="#">O</a>
+                <a href="#" class="facebook"></a>
+                <a href="#" class="twitter"></a>
+                <a href="#" class="be"></a>
+                <a href="#" class="web"></a>
             </div>
         </footer>
-    </div>
+
+        <script>
+            function menuToggle() {
+                document.body.classList.toggle('menu-open');
+            }
+        </script>
 </body>
 
 </html>
